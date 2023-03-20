@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <x-app-layout>
     <head>
         <meta charset="utf-8">
         <title>Gameblog</title>
@@ -19,10 +20,11 @@
             </div>
         </div>
         <div class='edit'>
-            <a href="/posts/{{ $post->id }}/edit">edit</a>
+            <a href="/posts/{{ $post->id }}/edit">編集</a>
         </div>
         <div class='footer'>
             <a href="/">戻る</a>
         </div>
     </body>
+    </x-app-layout>
 </html>
