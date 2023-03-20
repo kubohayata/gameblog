@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <x-app-layout>
     <head>
         <meta charset="utf-8">
         <title>Gameblog</title>
@@ -9,7 +10,7 @@
 
     </head>
     <body class="antialiased">
-        <h1>ゲーム攻略ブログ</h1>
+        <h1>ゲーム攻略解説ブログ</h1>
        <form action="/posts/{{ $post->id }}" method="POST">
            @csrf
            @method('PUT')
@@ -29,4 +30,5 @@
             <a href="/posts/{{ $post->id }}">戻る</a>
         </div>
     </body>
+    </x-app-layout>
 </html>
